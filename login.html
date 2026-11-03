@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập hệ thống — BE CLASSY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body data-page="login">
+  <div id="site-header-mount"></div>
+
+  <main class="auth-section">
+    <div class="container">
+      <div class="auth-wrapper">
+        <div class="auth-card">
+          <div class="text-center" style="margin-bottom:24px;">
+            <span class="eyebrow">Tài khoản BE CLASSY</span>
+            <h1 class="serif-heading" style="font-size:2rem;margin-top:4px;">Đăng nhập</h1>
+            <p class="text-muted" style="font-size:0.85rem;margin-top:4px;">Đăng nhập để đặt hàng, theo dõi đơn hoặc truy cập trang quản trị</p>
+          </div>
+
+          <div class="alert alert-error" id="login-alert" style="display:none;"></div>
+
+          <form id="login-form">
+            <div class="form-group">
+              <label class="form-label">Email hoặc Số điện thoại <span class="req">*</span></label>
+              <input type="text" class="form-control" id="login-identifier" placeholder="Nhập email hoặc số điện thoại..." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mật khẩu <span class="req">*</span></label>
+              <input type="password" class="form-control" id="login-password" placeholder="Nhập mật khẩu..." required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:8px;">Đăng nhập</button>
+          </form>
+
+          <div class="text-center" style="margin-top:18px;font-size:0.85rem;">
+            <span class="text-secondary">Chưa có tài khoản khách hàng?</span>
+            <a href="register.html" class="text-accent font-semibold" style="margin-left:4px;">Đăng ký ngay</a>
+          </div>
+
+          <!-- Bảng chọn nhanh 3 tác nhân UML phục vụ demo bảo vệ đồ án -->
+          <div class="demo-accounts-box">
+            <div class="font-semibold" style="color:var(--text-main);">Đăng nhập nhanh tài khoản Demo (3 tác nhân UML):</div>
+            <div class="text-muted" style="margin-top:2px;">Nhấn vào vai trò bên dưới để tự động điền và đăng nhập:</div>
+            <div class="demo-acc-btns">
+              <button type="button" class="btn btn-outline btn-sm" data-demo-login data-email="khachhang@gmail.com" data-pw="123456">
+                Khách hàng
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-login data-email="quan.na@beclassy.vn" data-pw="123456">
+                Nhân viên
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" data-demo-login data-email="admin@beclassy.vn" data-pw="123456">
+                Chủ cửa hàng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/customer.js"></script>
+</body>
+</html>
+

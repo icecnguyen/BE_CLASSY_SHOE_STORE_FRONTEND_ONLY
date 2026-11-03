@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý nhân viên — BE CLASSY</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body" data-admin-page="employees">
+  <div class="admin-shell">
+    <div id="admin-sidebar-mount"></div>
+    <div class="admin-main">
+      <div id="admin-topbar-mount"></div>
+      <main class="admin-content" id="admin-page-content"></main>
+    </div>
+  </div>
+
+  <!-- Modal Thêm/Sửa Nhân viên -->
+  <div class="modal-backdrop" id="nv-modal">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="nv-modal-title">Nhân viên</h3>
+        <button type="button" class="modal-close" data-close-modal="nv-modal">✕</button>
+      </div>
+      <div class="modal-body" id="nv-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
+

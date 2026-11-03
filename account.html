@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài khoản cá nhân — BE CLASSY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body data-page="account">
+  <div id="site-header-mount"></div>
+
+  <main class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span class="sep">/</span>
+      <span class="text-main font-medium">Tài khoản cá nhân</span>
+    </nav>
+
+    <div class="account-layout">
+      <aside class="account-nav">
+        <div class="account-user-head">
+          <div class="font-semibold" style="font-size:1rem;" id="acc-sidebar-name">Khách hàng</div>
+          <div class="text-muted" style="font-size:0.78rem;margin-top:3px;" id="acc-sidebar-meta">Mã KH</div>
+        </div>
+        <div class="account-nav-list">
+          <button type="button" class="active" data-acc-tab="profile">Thông tin cá nhân</button>
+          <button type="button" data-acc-tab="orders">Lịch sử &amp; Theo dõi đơn hàng</button>
+          <button type="button" data-acc-tab="returns">Yêu cầu đổi trả (DoiTra)</button>
+          <button type="button" data-acc-tab="support">Gửi yêu cầu hỗ trợ (PhieuHoTro)</button>
+          <button type="button" class="text-error" id="acc-logout-btn">Đăng xuất tài khoản</button>
+        </div>
+      </aside>
+
+      <section>
+        <div class="tab-pane active" data-acc-pane="profile"></div>
+        <div class="tab-pane" data-acc-pane="orders"></div>
+        <div class="tab-pane" data-acc-pane="returns"></div>
+        <div class="tab-pane" data-acc-pane="support"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal Chi tiết đơn hàng của khách -->
+  <div class="modal-backdrop" id="cust-order-modal">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3 class="modal-title">Chi tiết &amp; Tiến trình đơn hàng</h3>
+        <button type="button" class="modal-close" data-close-modal="cust-order-modal">✕</button>
+      </div>
+      <div class="modal-body" id="cust-order-modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal="cust-order-modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/customer.js"></script>
+</body>
+</html>
+

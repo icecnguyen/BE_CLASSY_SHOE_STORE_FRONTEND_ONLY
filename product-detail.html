@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm — BE CLASSY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body data-page="product-detail">
+  <div id="site-header-mount"></div>
+
+  <main class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span class="sep">/</span>
+      <a href="products.html">Sản phẩm</a>
+      <span class="sep">/</span>
+      <span class="text-main font-medium" id="detail-breadcrumb-name">Chi tiết giày</span>
+    </nav>
+
+    <div id="product-detail-mount"></div>
+
+    <section class="section-block" style="border-top:1px solid var(--border);">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Gợi ý phối đồ</span>
+          <h2 class="serif-heading section-title">Thiết kế tương tự</h2>
+        </div>
+        <a href="products.html" class="section-link">Xem tất cả</a>
+      </div>
+      <div class="product-grid" id="related-products-grid"></div>
+    </section>
+  </main>
+
+  <!-- Modal Bảng quy đổi kích cỡ -->
+  <div class="modal-backdrop" id="size-guide-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Bảng quy đổi kích cỡ giày tây BE CLASSY</h3>
+        <button type="button" class="modal-close" data-close-modal="size-guide-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-secondary" style="font-size:0.86rem;margin-bottom:14px;">
+          Đo chiều dài bàn chân từ gót đến đầu ngón chân dài nhất vào buổi chiều tối để chọn size chính xác nhất:
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Size Giày</th>
+              <th>Chiều dài bàn chân (cm)</th>
+              <th>Gợi ý phom chân</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Size 39</strong></td><td>24.0 – 24.5 cm</td><td>Chuẩn phom Việt</td></tr>
+            <tr><td><strong>Size 40</strong></td><td>24.6 – 25.2 cm</td><td>Phổ biến nhất</td></tr>
+            <tr><td><strong>Size 41</strong></td><td>25.3 – 25.9 cm</td><td>Phổ biến nhất</td></tr>
+            <tr><td><strong>Size 42</strong></td><td>26.0 – 26.6 cm</td><td>Bàn chân rộng ngang tăng 1 size</td></tr>
+            <tr><td><strong>Size 43</strong></td><td>26.7 – 27.3 cm</td><td>Phom lớn</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-close-modal="size-guide-modal">Đã hiểu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/customer.js"></script>
+</body>
+</html>
+

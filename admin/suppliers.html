@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý nhà cung cấp — BE CLASSY</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body" data-admin-page="suppliers">
+  <div class="admin-shell">
+    <div id="admin-sidebar-mount"></div>
+    <div class="admin-main">
+      <div id="admin-topbar-mount"></div>
+      <main class="admin-content" id="admin-page-content"></main>
+    </div>
+  </div>
+
+  <!-- Modal Thêm/Sửa Nhà cung cấp -->
+  <div class="modal-backdrop" id="ncc-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="ncc-modal-title">Nhà cung cấp</h3>
+        <button type="button" class="modal-close" data-close-modal="ncc-modal">✕</button>
+      </div>
+      <div class="modal-body" id="ncc-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
+

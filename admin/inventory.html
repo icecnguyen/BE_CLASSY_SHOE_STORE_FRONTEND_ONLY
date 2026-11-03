@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý kho &amp; Nhập hàng — BE CLASSY</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body" data-admin-page="inventory">
+  <div class="admin-shell">
+    <div id="admin-sidebar-mount"></div>
+    <div class="admin-main">
+      <div id="admin-topbar-mount"></div>
+      <main class="admin-content" id="admin-page-content"></main>
+    </div>
+  </div>
+
+  <!-- Modal Chi tiết Phiếu nhập kho -->
+  <div class="modal-backdrop" id="inv-detail-modal">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3 class="modal-title">Chi tiết hóa đơn nhập hàng</h3>
+        <button type="button" class="modal-close" data-close-modal="inv-detail-modal">✕</button>
+      </div>
+      <div class="modal-body" id="inv-modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal="inv-detail-modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
+

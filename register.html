@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký tài khoản khách hàng — BE CLASSY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body data-page="register">
+  <div id="site-header-mount"></div>
+
+  <main class="auth-section">
+    <div class="container">
+      <div class="auth-wrapper wide">
+        <div class="auth-card">
+          <div class="text-center" style="margin-bottom:24px;">
+            <span class="eyebrow">Khách hàng thành viên</span>
+            <h1 class="serif-heading" style="font-size:2rem;margin-top:4px;">Đăng ký tài khoản</h1>
+            <p class="text-muted" style="font-size:0.85rem;margin-top:4px;">Tạo tài khoản để mua sắm, lưu lịch sử đơn hàng và tích điểm bảo dưỡng</p>
+          </div>
+
+          <div class="alert alert-error" id="register-alert" style="display:none;"></div>
+
+          <form id="register-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Họ và tên <span class="req">*</span></label>
+                <input type="text" class="form-control" id="reg-name" placeholder="Ví dụ: Nguyễn Văn An" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Số điện thoại <span class="req">*</span></label>
+                <input type="tel" class="form-control" id="reg-phone" placeholder="09xxxxxxxx" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Địa chỉ Email <span class="req">*</span></label>
+              <input type="email" class="form-control" id="reg-email" placeholder="ten@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Địa chỉ giao hàng mặc định <span class="req">*</span></label>
+              <input type="text" class="form-control" id="reg-address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Mật khẩu <span class="req">*</span></label>
+                <input type="password" class="form-control" id="reg-password" placeholder="Tối thiểu 6 ký tự" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Xác nhận mật khẩu <span class="req">*</span></label>
+                <input type="password" class="form-control" id="reg-confirm" placeholder="Nhập lại mật khẩu" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:8px;">Tạo tài khoản</button>
+          </form>
+
+          <div class="text-center" style="margin-top:18px;font-size:0.85rem;">
+            <span class="text-secondary">Đã có tài khoản?</span>
+            <a href="login.html" class="text-accent font-semibold" style="margin-left:4px;">Đăng nhập tại đây</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/customer.js"></script>
+</body>
+</html>
+
