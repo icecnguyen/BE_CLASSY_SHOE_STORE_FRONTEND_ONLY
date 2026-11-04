@@ -1,0 +1,407 @@
+<mxfile host="Electron" pages="4">
+  <diagram name="trạng thái - tkê báo cáo" id="4tvwufhRrGzYMjjqbuM8">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="st-start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="40" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="st-khoitao" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="DangKhoiTao" vertex="1">
+          <mxGeometry height="60" width="130" x="160" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-xuly" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="DangXuLy" vertex="1">
+          <mxGeometry height="60" width="130" x="520" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-ready" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="DaSanSang" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-export" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#9673a6;fontStyle=1;fontSize=13;" value="DangXuatFile" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="st-end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1150" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-1" edge="1" parent="1" source="st-start" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-khoitao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-tr-1" connectable="0" parent="tr-1" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="moManHinh()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint x="-5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-err-time" edge="1" parent="1" source="st-khoitao" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;innerLoopWaypoints=1;" target="st-khoitao">
+          <mxGeometry relative="1" x="0.0011" as="geometry">
+            <Array as="points">
+              <mxPoint x="192.5" y="250" />
+              <mxPoint x="257.5" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-err-time" connectable="0" parent="tr-err-time" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="yeuCauXem() [thoiGianSai] / baoLoi()" vertex="1">
+          <mxGeometry relative="1" x="0.0011" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-2" edge="1" parent="1" source="st-khoitao" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-xuly">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-tr-2" connectable="0" parent="tr-2" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="yeuCauXem() [hopLe] / truyVanCSDL()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-3" edge="1" parent="1" source="st-xuly" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-ready">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-tr-3" connectable="0" parent="tr-3" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="tongHopXong() / hienThiKetQua()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-export-down" edge="1" parent="1" source="st-export" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="st-ready">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="230" as="sourcePoint" />
+            <mxPoint x="980" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-down" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="xuatFile(dinhDang)&#xa;[PDF / Excel]" vertex="1">
+          <mxGeometry height="35" width="120" x="790" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-export-up" edge="1" parent="1" source="st-ready" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="st-export">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="380" as="sourcePoint" />
+            <mxPoint x="850" y="277.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-up" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="xuatThanhCong()&#xa;/ taiFileVe()" vertex="1">
+          <mxGeometry height="35" width="120" x="980" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-refilter" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="660" />
+              <mxPoint x="205" y="660" />
+            </Array>
+            <mxPoint x="900" y="400" as="sourcePoint" />
+            <mxPoint x="205" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-refilter" connectable="0" parent="tr-refilter" style="edgeLabel;html=1;align=center;verticalAlign=top;fontSize=11;" value="chonLaiTieuChi() / lamMoi()" vertex="1">
+          <mxGeometry relative="1" y="10" as="geometry">
+            <mxPoint x="-12" y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-close" edge="1" parent="1" source="st-ready" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-close" connectable="0" parent="tr-close" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="dongBaoCao()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="cKSCn41j5Ql-Wjbmk7HK" name="trạng thái - đký">
+    <mxGraphModel dx="1241" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="st-acc-start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="40" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="st-acc-input" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="DangNhapThongTin" vertex="1">
+          <mxGeometry height="60" width="140" x="150" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-acc-check" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="DangKiemTra" vertex="1">
+          <mxGeometry height="60" width="130" x="520" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-acc-active" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="DaKichHoat" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-acc-lock" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#9673a6;fontStyle=1;fontSize=13;" value="TamKhoa" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="st-acc-end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1160" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-acc-1" edge="1" parent="1" source="st-acc-start" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-acc-input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-acc-1" connectable="0" parent="tr-acc-1" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="moFormDangKy()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint x="-5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-acc-err" edge="1" parent="1" source="st-acc-input" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="st-acc-input">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="250" />
+              <mxPoint x="255" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-acc-err" connectable="0" parent="tr-acc-err" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="nhapThieu() / baoLoiNhapLieu()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-acc-2" edge="1" parent="1" source="st-acc-input" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-acc-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-acc-2" connectable="0" parent="tr-acc-2" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="nhanDangKy() / kiemTraDuLieu()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-acc-3" edge="1" parent="1" source="st-acc-check" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-acc-active">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-acc-3" connectable="0" parent="tr-acc-3" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="hopLe() / luuKhachHang_TaiKhoan()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-acc-lock-up" edge="1" parent="1" source="st-acc-active" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="st-acc-lock">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-acc-lock" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="nhapSaiPass &gt;= 5&#xa;/ khoaTamThoi()" vertex="1">
+          <mxGeometry height="35" width="120" x="785" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-acc-lock-down" edge="1" parent="1" source="st-acc-lock" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="st-acc-active">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-acc-unlock" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="datLaiMatKhau()&#xa;/ moKhoa()" vertex="1">
+          <mxGeometry height="35" width="120" x="980" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-acc-reinput" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="585" y="520" />
+              <mxPoint x="220" y="520" />
+            </Array>
+            <mxPoint x="585" y="400" as="sourcePoint" />
+            <mxPoint x="220" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-acc-reinput" connectable="0" parent="tr-acc-reinput" style="edgeLabel;html=1;align=center;verticalAlign=top;fontSize=11;" value="trungThongTin() / baoLoiVaNhapLai()" vertex="1">
+          <mxGeometry relative="1" y="10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-acc-close" edge="1" parent="1" source="st-acc-active" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-acc-end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-acc-close" connectable="0" parent="tr-acc-close" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="huyTaiKhoan()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Ux-MxPcNBCPUwENWUSzN" name="trạng thái - ql giỏ hàng">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="st-gh-start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="40" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="st-gh-empty" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="GioHangRong" vertex="1">
+          <mxGeometry height="60" width="130" x="160" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-gh-hasitem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="CoSanPham" vertex="1">
+          <mxGeometry height="60" width="130" x="520" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-gh-paying" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="DangThanhToan" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-gh-checkout" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#9673a6;fontStyle=1;fontSize=13;" value="TamGiuHang" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="st-gh-end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1250" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-gh-1" edge="1" parent="1" source="st-gh-start" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-gh-empty">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-gh-1" connectable="0" parent="tr-gh-1" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="taoPhienGioHang()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint x="-5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-gh-2" edge="1" parent="1" source="st-gh-empty" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-gh-hasitem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-gh-2" connectable="0" parent="tr-gh-2" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="ThemSp(maBt) [conHang] / Tongtien()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-gh-del-item" edge="1" parent="1" source="st-gh-hasitem" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="st-gh-hasitem">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="552.5" y="250" />
+              <mxPoint x="617.5" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-gh-del-item" connectable="0" parent="tr-gh-del-item" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="XoaSp(maBt) [conSpKhac] / Tongtien()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-gh-3" edge="1" parent="1" source="st-gh-hasitem" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-gh-paying">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-gh-3" connectable="0" parent="tr-gh-3" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="chonThanhToan() / Thanhtoan(pttt)" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-gh-up" edge="1" parent="1" source="st-gh-paying" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="st-gh-checkout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-gh-up" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="chuyenHuongCongTT&#xa;/ choXacNhan()" vertex="1">
+          <mxGeometry height="35" width="120" x="910" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-gh-down" edge="1" parent="1" source="st-gh-checkout" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="st-gh-hasitem">
+          <mxGeometry relative="1" x="-0.1652" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="200" />
+              <mxPoint x="780" y="270" />
+              <mxPoint x="617.5" y="270" />
+            </Array>
+            <mxPoint x="850" y="200" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-gh-down" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="giaoDichThatBai() / hoanLaiGio()" vertex="1">
+          <mxGeometry height="35" width="160" x="690" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-gh-empty" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="585" y="520" />
+              <mxPoint x="225" y="520" />
+            </Array>
+            <mxPoint x="585" y="400" as="sourcePoint" />
+            <mxPoint x="225" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-gh-empty" connectable="0" parent="tr-gh-empty" style="edgeLabel;html=1;align=center;verticalAlign=top;fontSize=11;" value="XoaSp() [hetSanPham] / lamRongGio()" vertex="1">
+          <mxGeometry relative="1" y="10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-gh-close" edge="1" parent="1" source="st-gh-paying" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-gh-end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-gh-close" connectable="0" parent="tr-gh-close" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="giaoDichThanhCong() / dongDonHang()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="f69IO1UgQdy6WOEiNZVc" name="trạng thái - yc đổi trả">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="st-dt-start" parent="1" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="40" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="st-dt-create" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="DangKhoiTao" vertex="1">
+          <mxGeometry height="60" width="130" x="160" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-dt-check" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="DangKiemTraDon" vertex="1">
+          <mxGeometry height="60" width="130" x="520" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-dt-pending" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="ChoNhanVienDuyet" vertex="1">
+          <mxGeometry height="60" width="140" x="875" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="st-dt-approved" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=none;strokeColor=#9673a6;fontStyle=1;fontSize=13;" value="DaDongY" vertex="1">
+          <mxGeometry height="60" width="130" x="880" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="st-dt-end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1160" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-dt-1" edge="1" parent="1" source="st-dt-start" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-dt-create">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-dt-1" connectable="0" parent="tr-dt-1" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="taoYeuCauDoiTra()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint x="-5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-dt-loop" edge="1" parent="1" source="st-dt-create" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="st-dt-create">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="192.5" y="250" />
+              <mxPoint x="257.5" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-dt-loop" connectable="0" parent="tr-dt-loop" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="thieuThongTin() / baoLoi()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-dt-2" edge="1" parent="1" source="st-dt-create" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st-dt-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-dt-2" connectable="0" parent="tr-dt-2" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="guiYeuCau() / kiemTraDieuKien()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-dt-3" edge="1" parent="1" source="st-dt-check" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-dt-pending">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-dt-3" connectable="0" parent="tr-dt-3" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="[duDieuKien] / taoBanGhi_ChoDuyet()" vertex="1">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-dt-up" edge="1" parent="1" source="st-dt-pending" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="st-dt-approved">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-dt-up" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="Duyetyeucau()&#xa;/ Dongy()" vertex="1">
+          <mxGeometry height="35" width="120" x="785" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-dt-down" edge="1" parent="1" source="st-dt-approved" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="st-dt-pending">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-dt-down" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;strokeColor=none;fillColor=none;" value="HoanTien()&#xa;/ Capnhattonkho()" vertex="1">
+          <mxGeometry height="35" width="120" x="980" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tr-dt-reject" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="585" y="520" />
+              <mxPoint x="225" y="520" />
+            </Array>
+            <mxPoint x="585" y="400" as="sourcePoint" />
+            <mxPoint x="225" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-dt-reject" connectable="0" parent="tr-dt-reject" style="edgeLabel;html=1;align=center;verticalAlign=top;fontSize=11;" value="[khongDuDieuKien] / Tuchoi()" vertex="1">
+          <mxGeometry relative="1" y="10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr-dt-close" edge="1" parent="1" source="st-dt-pending" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" target="st-dt-end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-dt-close" connectable="0" parent="tr-dt-close" style="edgeLabel;html=1;align=center;verticalAlign=bottom;fontSize=11;" value="dongYeuCau()" vertex="1">
+          <mxGeometry relative="1" y="-10" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
